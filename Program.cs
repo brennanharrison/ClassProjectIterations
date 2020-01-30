@@ -6,24 +6,32 @@ namespace ClassProjectIterations
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter an integer between 1 and 100!"); // Ask for a number between 1 and 100.
+            // Ask for a number between 1 and 100.
+            Console.WriteLine("Enter an integer between 1 and 100!");
 
-            try // Execute if the string can be parsed.
+            // Execute if the string can be parsed.
+            try
             {
-                int x = 1; // Counter variable.
+                // Counter variable.
+                int x = 1;
 
-                string input = Console.ReadLine(); // Get the number from the user.
+                // Get the number from the user.
+                string input = Console.ReadLine();
 
+                // Parse the string to an integer.
+                int number = Int32.Parse(input);
 
-                int number = Int32.Parse(input); // Parse the string to an integer.
-                
-                if (number < 1 || number > 100) // Test if the number is in the acceptable range.
+                // Test if the number is in the acceptable range.
+                if (number < 1 || number > 100) 
                 {
-                    Console.WriteLine("You must enter a number between 1 and 100!"); // Write a message if it is not.
+                    // Write a message if it is not.
+                    Console.WriteLine("You must enter a number between 1 and 100!"); 
                 }
-                else // Otherwise execute code below.
+
+                // Otherwise execute code below.
+                else
                 {
-                    while (x <= number) // While the counter is less than the entered number.
+                    while (x <= number) 
                     {
                         // Write the current iteration number and the entered number.
                         Console.WriteLine("You have entered " + number.ToString() + "."
